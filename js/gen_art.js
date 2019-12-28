@@ -105,7 +105,25 @@ class GenArt {
     let g = document.createElementNS("http://www.w3.org/2000/svg", 'g');
     g.setAttribute("style", "fill: " + component.points.color);
     svg.append(g);
-    await layout.render(canvas, ctx, rng, component.points, g);
+    let points = await layout.render(canvas, ctx, rng, component.points, g);
+
+    if (component.lines) {
+      let lines
+      switch (component.lines.algorithm) {
+        case "needles":
+          lines = new Needles();
+          break;
+      }
+
+      g = document.createElementNS("http://www.w3.org/2000/svg", 'g');
+      g.setAttribute("stroke", component.lines.color);
+      g.setAttribute("stroke-opacity", component.lines.opacity);
+      g.setAttribute("stroke-width", component.lines.width);
+      svg.append(g);
+
+      await lines.render(rng, component.lines, points, g);
+    }
+
     $(rendering).hide();
   }
 }

@@ -27,8 +27,11 @@ class Grid {
       dot.setAttribute("cx", x);
       dot.setAttribute("cy", y);
       dot.setAttribute("r", config.size);
-      svg.append(dot);
+      if (config.size > 0) {
+        svg.append(dot);
+      }
       points.push({x: x, y: y});
     }
+    return points;
   }
 }

@@ -51,8 +51,11 @@ class BestCandidate {
       dot.setAttribute("cx", best.x);
       dot.setAttribute("cy", best.y);
       dot.setAttribute("r", config.size);
-      svg.append(dot);
+      if (config.size > 0) {
+        svg.append(dot);
+      }
       points.push({x: best.x, y: best.y});
     }
+    return points;
   }
 }
