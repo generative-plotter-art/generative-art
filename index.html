@@ -15,10 +15,13 @@
   - svg with different aspect ratio? Makes things like constant density tricky.
   - handle overlapping polylines. Currently, these won't plot correctly.
   - implement some simple hatches.
+  - rename "lines" to "graph" or "mesh"? Perhaps split needles/regular polygons/tsp into
+    their own thing since it doesn't create a mesh?
 -->
   <div id="download"></div>
 
   <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/delaunator.min.js"></script>
   <script src="js/csrng.js"></script>
 
   <script src="js/layout/uniform-random.js"></script>
@@ -29,6 +32,7 @@
   <script src="js/lines/needles.js"></script>
   <script src="js/lines/regular-polygons.js"></script>
   <script src="js/lines/neighbors.js"></script>
+  <script src="js/lines/delaunay-triangles.js"></script>
 
   <script src="js/gen_art.js"></script>
 </body>

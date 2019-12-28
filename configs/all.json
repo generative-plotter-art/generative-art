@@ -7,5 +7,8 @@
   "configs/05-regular-polygons.json",
   "configs/06-neighbors-01.json",
   "configs/07-neighbors-02.json",
-  "configs/08-neighbors-03.json"
+  "configs/08-neighbors-03.json",
+  "configs/09-delaunay-triangles-01.json",
+  "configs/10-delaunay-triangles-02.json",
+  "configs/11-delaunay-triangles-03.json"
 ]

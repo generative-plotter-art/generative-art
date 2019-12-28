@@ -14,13 +14,7 @@ class PoissonDisc {
       outer: while (true) {
         x = await rng.float() * 2.0 - 1.0;
         y = await rng.float() * 2.0 - 1.0;
-        let px = ((x + 1.0) / 2.0 * canvas.width)|0;
-        let py = ((y + 1.0) / 2.0 * canvas.height)|0;
-        let pixels = ctx.getImageData(px, py, 1, 1).data;
-        var is_inside = (pixels[0] < 128) && (pixels[1] < 128) && (pixels[2] < 128);
-        if ((px == canvas.width) || (py == canvas.height)) {
-          is_inside = false;
-        }
+        let is_inside = check_inside(x, y, canvas, ctx);
         if (inside != is_inside) {
           continue;
         }

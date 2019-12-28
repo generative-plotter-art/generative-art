@@ -1,0 +1,49 @@
+{
+  "title": "Delaunay Triangles 02",
+  "background": "#333652",
+  "foreground": "#FAD02C",
+  "components": [{
+    "name": "images/sqlogo_outer.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": "73948584"
+    },
+    "points": {
+      "layout": {
+        "algorithm": "best-candidate",
+        "candidates": 10,
+        "number": 300,
+        "prob": 1
+      },
+      "size": 0
+    },
+    "lines": {
+      "algorithm": "delaunay-triangles",
+      "color": "#E9EAEC",
+      "opacity": 0.9,
+      "width": 0.001,
+      "check_inside": true
+    }
+  },{
+    "name": "images/sqlogo_inner.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": "27134530"
+    },
+    "points": {
+      "layout": {
+        "algorithm": "best-candidate",
+        "candidates": 10,
+        "number": 35,
+        "prob": 1
+      },
+      "size": 0
+    },
+    "lines": {
+      "algorithm": "delaunay-triangles",
+      "color": "#90ADC6",
+      "opacity": 0.9,
+      "width": 0.001
+    }
+  }]
+}
