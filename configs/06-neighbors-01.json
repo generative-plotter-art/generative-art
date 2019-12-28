@@ -1,0 +1,48 @@
+{
+  "title": "Spiderwebb-y",
+  "background": "#222",
+  "foreground": "#eee",
+  "components": [{
+    "name": "images/sqlogo_outer.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": "1"
+    },
+    "points": {
+      "layout": {
+        "algorithm": "uniform-random",
+        "number": 4500,
+        "prob": 1
+      },
+      "size": 0
+    },
+    "lines": {
+      "algorithm": "neighbors",
+      "max_distance": 0.025,
+      "color": "#88e",
+      "opacity": 0.9,
+      "width": 0.0002
+    }
+  },{
+    "name": "images/sqlogo_inner.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": "2"
+    },
+    "points": {
+      "layout": {
+        "algorithm": "uniform-random",
+        "number": 500,
+        "prob": 1
+      },
+      "size": 0
+    },
+    "lines": {
+      "algorithm": "neighbors",
+      "max_distance": 0.025,
+      "color": "#88e",
+      "opacity": 0.9,
+      "width": 0.0002
+    }
+  }]
+}

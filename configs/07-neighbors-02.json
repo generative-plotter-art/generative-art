@@ -1,0 +1,28 @@
+{
+  "title": "Microscop-y",
+  "background": "#222",
+  "foreground": "#eee",
+  "components": [{
+    "name": "images/sqlogo.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": "1"
+    },
+    "points": {
+      "layout": {
+        "algorithm": "uniform-random",
+        "number": 5000,
+        "prob": 1
+      },
+      "size": 0,
+      "color": "#88e"
+    },
+    "lines": {
+      "algorithm": "neighbors",
+      "max_distance": 0.01,
+      "color": "#88e",
+      "opacity": 0.9,
+      "width": 0.002
+    }
+  }]
+}

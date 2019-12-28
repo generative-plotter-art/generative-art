@@ -1,0 +1,50 @@
+{
+  "title": "Muscle-y",
+  "background": "#222",
+  "foreground": "#eee",
+  "components": [{
+    "name": "images/sqlogo_outer.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": "8"
+    },
+    "points": {
+      "layout": {
+        "algorithm": "best-candidate",
+        "candidates": 10,
+        "number": 300,
+        "prob": 1
+      },
+      "size": 0
+    },
+    "lines": {
+      "algorithm": "neighbors",
+      "max_distance": 0.2,
+      "color": "#88e",
+      "opacity": 0.9,
+      "width": 0.001
+    }
+  },{
+    "name": "images/sqlogo_inner.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": "4"
+    },
+    "points": {
+      "layout": {
+        "algorithm": "best-candidate",
+        "candidates": 10,
+        "number": 35,
+        "prob": 1
+      },
+      "size": 0
+    },
+    "lines": {
+      "algorithm": "neighbors",
+      "max_distance": 0.2,
+      "color": "#88e",
+      "opacity": 0.9,
+      "width": 0.001
+    }
+  }]
+}

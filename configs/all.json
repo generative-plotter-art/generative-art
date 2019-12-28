@@ -4,5 +4,8 @@
   "configs/02-grid.json",
   "configs/03-poisson-disc.json",
   "configs/04-needles.json",
-  "configs/05-regular-polygons.json"
+  "configs/05-regular-polygons.json",
+  "configs/06-neighbors-01.json",
+  "configs/07-neighbors-02.json",
+  "configs/08-neighbors-03.json"
 ]

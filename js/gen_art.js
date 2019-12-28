@@ -121,6 +121,10 @@ class GenArt {
           lines = new RegularPolygons();
           g.setAttribute("fill", config.background)
           break;
+        case "neighbors":
+          lines = new Neighbors();
+          g.setAttribute("stroke-opacity", component.lines.opacity);
+          break;
       }
       svg.append(g);
 
