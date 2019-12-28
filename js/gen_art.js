@@ -27,6 +27,15 @@ class GenArt {
       this.render();
       return false;
     });
+    $(save).click(_ => {
+      var blob = new Blob([svg.outerHTML], {type : 'image/svg+xml'});
+      var e = document.createElement('a');
+      e.setAttribute('href', URL.createObjectURL(blob));
+      e.setAttribute('download', 'generative_art.svg');
+      e.style.display = 'none';
+      document.body.appendChild(e);
+      e.click();
+    })
 
     document.body.onload = _ => {
       getJSON("configs/all.json", configs => {
@@ -57,6 +66,13 @@ class GenArt {
     document.body.style.backgroundColor = config.background;
     document.body.style.color = config.foreground;
     title.textContent = "#" + this.current + " " + config.title;
+    let rect = document.createElementNS("http://www.w3.org/2000/svg", 'rect');
+    rect.setAttribute("x", "-1");
+    rect.setAttribute("y", "-1");
+    rect.setAttribute("width", "2");
+    rect.setAttribute("height", "2");
+    rect.setAttribute("fill", config.background);
+    svg.append(rect);
 
     for (let i=0; i<config.components.length; i++) {
       // render each component

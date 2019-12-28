@@ -1,7 +1,7 @@
 {
   "title": "Poisson disc",
-  "background": "#222",
-  "foreground": "#eee",
+  "background": "#F652A0",
+  "foreground": "#4C5270",
   "components": [{
     "name": "images/sqlogo.png",
     "rng": {
@@ -16,7 +16,7 @@
         "prob": 0.97
       },
       "size": 0.002,
-      "color": "#eee"
+      "color": "#36EEE0"
     }
   }]
 }

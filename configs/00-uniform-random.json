@@ -1,7 +1,7 @@
 {
   "title": "Uniform random",
-  "background": "#222",
-  "foreground": "#eee",
+  "background": "#0C6980",
+  "foreground": "#00A8A8",
   "components": [{
     "name": "images/sqlogo.png",
     "rng": {
@@ -15,7 +15,7 @@
         "prob": 0.97
       },
       "size": 0.001,
-      "color": "#eee"
+      "color": "#C4DBE0"
     }
   }]
 }
