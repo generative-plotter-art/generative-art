@@ -3,5 +3,6 @@
   "configs/01-best-candidate.json",
   "configs/02-grid.json",
   "configs/03-poisson-disc.json",
-  "configs/04-needles.json"
+  "configs/04-needles.json",
+  "configs/05-regular-polygons.json"
 ]

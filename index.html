@@ -11,8 +11,9 @@
   <svg id="svg" viewBox="-1 -1 2 2" xmlns="http://www.w3.org/2000/svg"></svg>
   <div id="title"></div>
 <!-- todo:
-  - svg with different aspect ratio
-  - background thread
+  - svg with different aspect ratio? Makes things like constant density tricky.
+  - handle overlapping polylines. Currently, these won't plot correctly.
+  - implement some simple hatches.
 -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/csrng.js"></script>
@@ -23,6 +24,7 @@
   <script src="js/layout/poisson-disc.js"></script>
 
   <script src="js/lines/needles.js"></script>
+  <script src="js/lines/regular-polygons.js"></script>
 
   <script src="js/gen_art.js"></script>
 </body>

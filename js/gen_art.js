@@ -64,11 +64,11 @@ class GenArt {
       let img = new Image();
       img.src = component.name;
       img.onerror = e => {throw e};
-      img.onload = _ => this._render(component, img);
+      img.onload = _ => this._render(config, component, img);
     }
   }
 
-  async _render(component, img) {
+  async _render(config, component, img) {
     let canvas = document.createElement('canvas');
     canvas.width = img.width;
     canvas.height = img.height;
@@ -109,16 +109,19 @@ class GenArt {
 
     if (component.lines) {
       let lines
+      g = document.createElementNS("http://www.w3.org/2000/svg", 'g');
+      g.setAttribute("stroke", component.lines.color);
+      g.setAttribute("stroke-width", component.lines.width);
       switch (component.lines.algorithm) {
         case "needles":
           lines = new Needles();
+          g.setAttribute("stroke-opacity", component.lines.opacity);
+          break;
+        case "regular-polygons":
+          lines = new RegularPolygons();
+          g.setAttribute("fill", config.background)
           break;
       }
-
-      g = document.createElementNS("http://www.w3.org/2000/svg", 'g');
-      g.setAttribute("stroke", component.lines.color);
-      g.setAttribute("stroke-opacity", component.lines.opacity);
-      g.setAttribute("stroke-width", component.lines.width);
       svg.append(g);
 
       await lines.render(rng, component.lines, points, g);

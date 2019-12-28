@@ -1,0 +1,28 @@
+{
+  "title": "Nachos",
+  "background": "#0292B7",
+  "foreground": "#DEE2EC",
+  "components": [{
+    "name": "images/heart.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": "1"
+    },
+    "points": {
+      "layout": {
+        "number": 98,
+        "algorithm": "poisson-disc",
+        "min_distance": 0.09,
+        "prob": 1
+      },
+      "size": 0
+    },
+    "lines": {
+      "algorithm": "regular-polygons",
+      "sides": 3,
+      "size": 0.09,
+      "color": "#EEB5EB",
+      "width": 0.004
+    }
+  }]
+}

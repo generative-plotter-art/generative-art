@@ -18,6 +18,9 @@ class PoissonDisc {
         let py = ((y + 1.0) / 2.0 * canvas.height)|0;
         let pixels = ctx.getImageData(px, py, 1, 1).data;
         var is_inside = (pixels[0] < 128) && (pixels[1] < 128) && (pixels[2] < 128);
+        if ((px == canvas.width) || (py == canvas.height)) {
+          is_inside = false;
+        }
         if (inside != is_inside) {
           continue;
         }
@@ -28,6 +31,7 @@ class PoissonDisc {
             continue outer;
           }
         }
+
         break;
       }
 

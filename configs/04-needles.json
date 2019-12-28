@@ -14,8 +14,7 @@
         "number": 5000,
         "prob": 0.95
       },
-      "size": 0.001,
-      "color": "#eee"
+      "size": 0
     },
     "lines": {
       "algorithm": "needles",
