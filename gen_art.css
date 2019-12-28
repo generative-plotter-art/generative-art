@@ -9,6 +9,14 @@ html, body {
   font-family: sans-serif;
 }
 
+.menu div {
+  padding: 2px;
+}
+
+.menu a {
+  color: inherit;
+}
+
 #title {
   position: fixed;
   bottom: 1em;
@@ -29,4 +37,8 @@ button {
   background: inherit;
   color: inherit;
   opacity: 0.5;
+}
+
+#download {
+  display: none;
 }

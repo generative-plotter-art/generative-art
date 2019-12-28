@@ -30,10 +30,10 @@ class GenArt {
     $(save).click(_ => {
       var blob = new Blob([svg.outerHTML], {type : 'image/svg+xml'});
       var e = document.createElement('a');
-      e.setAttribute('href', URL.createObjectURL(blob));
+      const url = URL.createObjectURL(blob)
+      e.setAttribute('href', url);
       e.setAttribute('download', 'generative_art.svg');
-      e.style.display = 'none';
-      document.body.appendChild(e);
+      $(download).empty().append(e);
       e.click();
     })
 
