@@ -1,7 +1,7 @@
 {
   "title": "Best candidate",
-  "background": "#2a2a2a",
-  "foreground": "#eee",
+  "background": "#333",
+  "foreground": "#1da1f2",
   "components": [{
     "name": "images/twitter.png",
     "rng": {

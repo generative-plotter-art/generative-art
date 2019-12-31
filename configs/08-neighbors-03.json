@@ -1,7 +1,7 @@
 {
   "title": "Muscle-y",
-  "background": "#222",
-  "foreground": "#eee",
+  "background": "#333",
+  "foreground": "#88e",
   "components": [{
     "name": "images/sqlogo_outer.png",
     "rng": {

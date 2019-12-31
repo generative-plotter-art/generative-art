@@ -1,6 +1,6 @@
 {
   "title": "Delaunay Triangles 02",
-  "background": "#333652",
+  "background": "#333",
   "foreground": "#FAD02C",
   "components": [{
     "name": "images/sqlogo_outer.png",
@@ -19,7 +19,7 @@
     },
     "lines": {
       "algorithm": "delaunay-triangles",
-      "color": "#E9EAEC",
+      "color": "#FAD02C",
       "opacity": 0.9,
       "width": 0.001,
       "check_inside": true
@@ -41,7 +41,7 @@
     },
     "lines": {
       "algorithm": "delaunay-triangles",
-      "color": "#90ADC6",
+      "color": "#FAD02C",
       "opacity": 0.9,
       "width": 0.001
     }

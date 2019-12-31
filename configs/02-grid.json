@@ -1,7 +1,7 @@
 {
   "title": "Heart grid",
-  "background": "#2F2440",
-  "foreground": "#BA0F30",
+  "background": "#333",
+  "foreground": "#FF2511",
   "components": [{
     "name": "images/heart.png",
     "rng": {
