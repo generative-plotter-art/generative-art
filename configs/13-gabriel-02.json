@@ -1,0 +1,28 @@
+{
+  "title": "Gabriel 02",
+  "background": "#333",
+  "foreground": "#C39140",
+  "components": [{
+    "name": "images/sqlogo.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": "1"
+    },
+    "points": {
+      "layout": {
+        "algorithm": "poisson-disc",
+        "min_distance": 0.02,
+        "number": 1000,
+        "prob": 0.9
+      },
+      "size": 0,
+      "color": "#88e"
+    },
+    "lines": {
+      "algorithm": "gabriel",
+      "color": "#C39140",
+      "opacity": 0.9,
+      "width": 0.002
+    }
+  }]
+}

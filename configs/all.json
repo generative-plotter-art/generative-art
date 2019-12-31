@@ -10,5 +10,7 @@
   "configs/08-neighbors-03.json",
   "configs/09-delaunay-triangles-01.json",
   "configs/10-delaunay-triangles-02.json",
-  "configs/11-delaunay-triangles-03.json"
+  "configs/11-delaunay-triangles-03.json",
+  "configs/12-gabriel-01.json",
+  "configs/13-gabriel-02.json"
 ]

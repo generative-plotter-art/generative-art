@@ -1,0 +1,44 @@
+{
+  "title": "Gabriel 01",
+  "background": "#333",
+  "foreground": "#C39140",
+  "components": [{
+    "name": "images/sqlogo_outer.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": "1"
+    },
+    "points": {
+      "layout": {
+        "algorithm": "uniform-random",
+        "number": 450,
+        "prob": 1
+      },
+      "size": 0
+    },
+    "lines": {
+      "algorithm": "gabriel",
+      "color": "#C39140",
+      "width": 0.002
+    }
+  },{
+    "name": "images/sqlogo_inner.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": "2"
+    },
+    "points": {
+      "layout": {
+        "algorithm": "uniform-random",
+        "number": 50,
+        "prob": 1
+      },
+      "size": 0
+    },
+    "lines": {
+      "algorithm": "gabriel",
+      "color": "#C39140",
+      "width": 0.002
+    }
+  }]
+}

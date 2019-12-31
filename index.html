@@ -17,6 +17,7 @@
   - implement some simple hatches.
   - rename "lines" to "graph" or "mesh"? Perhaps split needles/regular polygons/tsp into
     their own thing since it doesn't create a mesh?
+  - fix race condition which causes next + two or more images to be rendered on top of each other.
 -->
   <div id="download"></div>
 
@@ -33,6 +34,7 @@
   <script src="js/lines/regular-polygons.js"></script>
   <script src="js/lines/neighbors.js"></script>
   <script src="js/lines/delaunay-triangles.js"></script>
+  <script src="js/lines/gabriel.js"></script>
 
   <script src="js/gen_art.js"></script>
 </body>

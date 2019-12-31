@@ -145,6 +145,10 @@ class GenArt {
           lines = new DelaunayTriangles();
           g.setAttribute("stroke-opacity", component.lines.opacity);
           break;
+        case "gabriel":
+          lines = new Gabriel();
+          g.setAttribute("stroke-opacity", component.lines.opacity);
+          break;
       }
       svg.append(g);
 
