@@ -12,10 +12,10 @@
       "layout": {
         "algorithm": "best-candidate",
         "candidates": 10,
-        "number": 10000,
+        "number": 5000,
         "prob": 0.97
       },
-      "size": 0.001,
+      "size": 0.005,
       "color": "#1da1f2"
     }
   }]
