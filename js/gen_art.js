@@ -161,6 +161,10 @@ class GenArt {
           lines = new Tsp();
           g.setAttribute("stroke-opacity", component.lines.opacity);
           break;
+        case "growth":
+          lines = new Growth();
+          g.setAttribute("stroke-opacity", component.lines.opacity);
+          break;
       }
       svg.append(g);
 

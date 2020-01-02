@@ -13,5 +13,6 @@
   "configs/11-delaunay-triangles-03.json",
   "configs/12-gabriel-01.json",
   "configs/13-gabriel-02.json",
-  "configs/14-tsp.json"
+  "configs/14-tsp.json",
+  "configs/15-growth.json"
 ]

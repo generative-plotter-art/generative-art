@@ -1,0 +1,58 @@
+{
+  "title": "Growth",
+  "background": "#333",
+  "foreground": "#88CA5E",
+  "components": [{
+    "name": "images/sqlogo_inner.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": ""
+    },
+    "points": {
+      "layout": {
+        "algorithm": "uniform-random",
+        "number": 1,
+        "prob": 1
+      },
+      "size": 0,
+      "color": "#fff"
+    },
+    "lines": {
+      "algorithm": "growth",
+      "segments": 15,
+      "segment_length": 0.01,
+      "segment_angle": 0.5,
+      "segment_spacing": 0.02,
+      "segment_min": 8,
+      "color": "#88CA5E",
+      "opacity": 0.9,
+      "width": 0.002
+    }
+  },{
+    "name": "images/sqlogo_outer.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": ""
+    },
+    "points": {
+      "layout": {
+        "algorithm": "uniform-random",
+        "number": 1,
+        "prob": 1
+      },
+      "size": 0,
+      "color": "#fff"
+    },
+    "lines": {
+      "algorithm": "growth",
+      "segments": 150,
+      "segment_length": 0.01,
+      "segment_angle": 0.5,
+      "segment_spacing": 0.02,
+      "segment_min": 8,
+      "color": "#88CA5E",
+      "opacity": 0.9,
+      "width": 0.002
+    }
+  }]
+}
