@@ -1,0 +1,48 @@
+{
+  "title": "Traveling Salesman Path",
+  "background": "#333",
+  "foreground": "#72C64B",
+  "components": [{
+    "name": "images/sqlogo_outer.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": "60625484"
+    },
+    "points": {
+      "layout": {
+        "algorithm": "uniform-random",
+        "number": 1000,
+        "prob": 1
+      },
+      "size": 0.002,
+      "color": "#fff"
+    },
+    "lines": {
+      "algorithm": "tsp",
+      "color": "#72C64B",
+      "opacity": 0.9,
+      "width": 0.002
+    }
+  },{
+    "name": "images/sqlogo_inner.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": "116337736"
+    },
+    "points": {
+      "layout": {
+        "algorithm": "uniform-random",
+        "number": 100,
+        "prob": 1
+      },
+      "size": 0.002,
+      "color": "#fff"
+    },
+    "lines": {
+      "algorithm": "tsp",
+      "color": "#72C64B",
+      "opacity": 0.9,
+      "width": 0.002
+    }
+  }]
+}

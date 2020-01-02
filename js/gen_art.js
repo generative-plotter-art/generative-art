@@ -55,7 +55,7 @@ class GenArt {
     }
   }
 
-  render() {
+  async render() {
     document.location.hash = this.current;
     let config = this.configs[this.current];
 
@@ -74,14 +74,22 @@ class GenArt {
     rect.setAttribute("fill", config.background);
     svg.append(rect);
 
+    var promises = [];
     for (let i=0; i<config.components.length; i++) {
       // render each component
       let component = config.components[i];
       let img = new Image();
       img.src = component.name;
       img.onerror = e => {throw e};
-      img.onload = _ => this._render(config, component, img);
+      promises.push(new Promise((done, _) => {
+        img.onload = async _ => {
+          var t = await this._render(config, component, img);
+          done(t);
+        };
+      }));
     }
+    await Promise.all(promises);
+    $(rendering).hide();
   }
 
   async _render(config, component, img) {
@@ -149,13 +157,15 @@ class GenArt {
           lines = new Gabriel();
           g.setAttribute("stroke-opacity", component.lines.opacity);
           break;
+        case "tsp":
+          lines = new Tsp();
+          g.setAttribute("stroke-opacity", component.lines.opacity);
+          break;
       }
       svg.append(g);
 
-      await lines.render(rng, component.lines, points, g, canvas, ctx);
+      return lines.render(rng, component.lines, points, g, canvas, ctx);
     }
-
-    $(rendering).hide();
   }
 }
 

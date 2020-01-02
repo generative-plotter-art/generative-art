@@ -19,16 +19,31 @@
     their own thing since it doesn't create a mesh?
   - fix race condition which causes next + two or more images to be rendered on top of each other.
   - add some description to the output.
-  - implement TSP.
   - implement one or more maze generation algorithms.
   - implement rock/meteorite.
   - implement hair/flow.
   - implement something with bezier curves.
+  - implement something with Polyominos.
+
+  - Add some links, e.g.:
+    - https://mattdesl.svbtle.com/pen-plotter-1
+    - https://mattdesl.svbtle.com/pen-plotter-2
+    - https://www.michaelfogleman.com/plotter/
+    - https://www.michaelfogleman.com/projects/axi/
+    - https://tylerxhobbs.com/essays/2018/executing-generative-art-with-a-plotter
+    - https://twitter.com/mattdesl
+    - https://twitter.com/DimitrisLad
+    - https://twitter.com/sighack
+    - http://biosrhythm.com/?page_id=1569
+    - https://twitter.com/dimitrislad/status/1002514173773959168
+    - https://reindernijhoff.net/tag/plotter/
+    - and lots more...
 -->
   <div id="download"></div>
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/delaunator.min.js"></script>
+  <script src="js/tsp_solver.js"></script>
   <script src="js/csrng.js"></script>
 
   <script src="js/layout/uniform-random.js"></script>
@@ -41,6 +56,7 @@
   <script src="js/lines/neighbors.js"></script>
   <script src="js/lines/delaunay-triangles.js"></script>
   <script src="js/lines/gabriel.js"></script>
+  <script src="js/lines/tsp.js"></script>
 
   <script src="js/gen_art.js"></script>
 </body>
