@@ -3,6 +3,7 @@
  *
  * Inspired to some degree by:
  * https://medium.com/@fogleman/pen-plotter-programming-the-basics-ec0407ab5929
+ * https://sighack.com/post/getting-creative-with-perlin-noise-fields
  */
 class Growth {
   async render(rng, config, points, g, canvas, ctx) {
