@@ -6,12 +6,12 @@
     "name": "images/sqlogo_outer.png",
     "rng": {
       "algorithm": "csrng",
-      "seed": "73948584"
+      "seed": ""
     },
     "points": {
       "layout": {
-        "algorithm": "best-candidate",
-        "candidates": 10,
+        "algorithm": "uniform-random",
+        "symmetry": ["flip-x", "flip-y"],
         "number": 300,
         "prob": 1
       },
@@ -28,13 +28,13 @@
     "name": "images/sqlogo_inner.png",
     "rng": {
       "algorithm": "csrng",
-      "seed": "27134530"
+      "seed": ""
     },
     "points": {
       "layout": {
-        "algorithm": "best-candidate",
-        "candidates": 10,
-        "number": 35,
+        "algorithm": "uniform-random",
+        "symmetry": ["rot-90", "flip-x"],
+        "number": 40,
         "prob": 1
       },
       "size": 0
