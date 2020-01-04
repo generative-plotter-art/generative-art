@@ -30,7 +30,15 @@ import { Hair } from "./lines/hair.js";
 
 import { Csrng } from "./csrng.js";
 
+var instance;
+
 export class GenArt {
+  static createInstance() {
+    if (!instance) {
+      instance = new GenArt();
+    }
+  }
+
   constructor() {
     this.configs = [];
     this.current = document.location.hash.substr(1)|0;
@@ -198,5 +206,3 @@ export class GenArt {
 function getJSON(file, callback) {
   $.getJSON(file, callback).fail((jqxhr, textStatus, err) => {console.error(textStatus); throw err});
 }
-
-new GenArt();
