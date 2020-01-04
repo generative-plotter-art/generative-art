@@ -26,6 +26,7 @@ import { DelaunayTriangles } from "./lines/delaunay-triangles.js";
 import { Gabriel } from "./lines/gabriel.js";
 import { Tsp } from "./lines/tsp.js";
 import { Growth } from "./lines/growth.js";
+import { Hair } from "./lines/hair.js";
 
 import { Csrng } from "./csrng.js";
 
@@ -179,6 +180,10 @@ export class GenArt {
           break;
         case "growth":
           lines = new Growth();
+          g.setAttribute("stroke-opacity", component.lines.opacity);
+          break;
+        case "hair":
+          lines = new Hair();
           g.setAttribute("stroke-opacity", component.lines.opacity);
           break;
       }

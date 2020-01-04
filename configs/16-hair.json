@@ -1,0 +1,30 @@
+{
+  "title": "Hair",
+  "background": "#333",
+  "foreground": "#FADCD9",
+  "components": [{
+    "name": "images/sqlogo.png",
+    "rng": {
+      "algorithm": "csrng",
+      "seed": "73819975"
+    },
+    "points": {
+      "layout": {
+        "algorithm": "uniform-random",
+        "number": 1000,
+        "prob": 1
+      },
+      "size": 0,
+      "color": "#fff"
+    },
+    "lines": {
+      "algorithm": "hair",
+      "smoothness": 0.01,
+      "chaos": 0.5,
+      "direction": 2,
+      "color": "#FADCD9",
+      "opacity": 0.8,
+      "width": 0.002
+    }
+  }]
+}
