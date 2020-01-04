@@ -3,7 +3,7 @@
  *
  * Note: this is very slow but it makes for a nice loading animation, to some degree.
  */
-class Csrng {
+export class Csrng {
   constructor(seed) {
     // convert seed to array
     let arr =  new Uint8Array(seed.split('').map(x => x.charCodeAt(0)));

@@ -3,7 +3,7 @@
  *
  * TODO: overlaps need to be converted so they can be plotted properly.
  */
-class RegularPolygons {
+export class RegularPolygons {
   async render(rng, config, points, g) {
     for (let i=0; i<points.length; i++) {
       let g2 = document.createElementNS("http://www.w3.org/2000/svg", "g");

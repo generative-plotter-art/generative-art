@@ -1,7 +1,9 @@
 /**
  * Connects nodes which are close to each other
  */
-class Neighbors {
+import { dist } from "../helper.js";
+
+export class Neighbors {
   async render(rng, config, points, g) {
     for (let i=0; i<points.length; i++) {
       for (let j=0; j<i; j++) {

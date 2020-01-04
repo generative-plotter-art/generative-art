@@ -1,0 +1,36 @@
+{
+  "name": "generative_art",
+  "version": "1.0.0",
+  "description": "Generative art suitable for XY plotters (i.e. AxiDraw)",
+  "private": true,
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0",
+    "delaunator": "^4.0.1",
+    "jquery": "^3.4.1",
+    "simplex-noise": "^2.4.0",
+    "watchify": "^3.11.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx webpack --watch --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://generative-plotter-art@github.com/generative-plotter-art/generative-art.git"
+  },
+  "keywords": [],
+  "author": "Alok Menghrajani",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/generative-plotter-art/generative-art/issues"
+  },
+  "homepage": "https://github.com/generative-plotter-art/generative-art"
+}

@@ -1,7 +1,9 @@
 /**
  * Grid snaps uniform random points to a grid.
  */
-class Grid {
+import { check_inside } from "../helper.js";
+
+export class Grid {
   async render(canvas, ctx, rng, config, svg) {
     let points = [];
     while (points.length < config.layout.number) {

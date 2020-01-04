@@ -2,7 +2,10 @@
  * Delaunay Triangulation
  * see https://en.wikipedia.org/wiki/Delaunay_triangulation
  */
-class DelaunayTriangles {
+import { check_inside } from "../helper.js";
+import Delaunator from 'delaunator';
+
+export class DelaunayTriangles {
   async render(rng, config, points, g, canvas, ctx) {
     let p = [];
     for (let i=0; i<points.length; i++) {

@@ -12,6 +12,8 @@
   <svg id="svg" viewBox="-1 -1 2 2" xmlns="http://www.w3.org/2000/svg"></svg>
   <div id="title"></div>
 <!-- todo:
+  - Fix race condition with config loading...
+
   - svg with different aspect ratio? Makes things like constant density tricky.
   - handle overlapping polylines. Currently, these won't plot correctly.
   - implement some simple hatches.
@@ -42,24 +44,6 @@
 -->
   <div id="download"></div>
 
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/delaunator.min.js"></script>
-  <script src="js/tsp_solver.js"></script>
-  <script src="js/csrng.js"></script>
-
-  <script src="js/layout/uniform-random.js"></script>
-  <script src="js/layout/best-candidate.js"></script>
-  <script src="js/layout/grid.js"></script>
-  <script src="js/layout/poisson-disc.js"></script>
-
-  <script src="js/lines/needles.js"></script>
-  <script src="js/lines/regular-polygons.js"></script>
-  <script src="js/lines/neighbors.js"></script>
-  <script src="js/lines/delaunay-triangles.js"></script>
-  <script src="js/lines/gabriel.js"></script>
-  <script src="js/lines/tsp.js"></script>
-  <script src="js/lines/growth.js"></script>
-
-  <script src="js/gen_art.js"></script>
+  <script src="dist/main.js"></script>
 </body>
 </html>

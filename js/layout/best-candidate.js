@@ -2,7 +2,9 @@
  * BestCandidate is slower than Poisson-disc (when implemented right) and looks less nice.
  * I wrote it because the PoissonDisc is currently not optimized.
  */
-class BestCandidate {
+import { check_inside, dist } from "../helper.js";
+
+export class BestCandidate {
   async render(canvas, ctx, rng, config, svg) {
     let points = [];
     while (points.length < config.layout.number) {

@@ -1,7 +1,7 @@
 /**
  * Draws random needles at each point.
  */
-class Needles {
+export class Needles {
   async render(rng, config, points, g) {
     for (let i=0; i<points.length; i++) {
       let a = await rng.float() * Math.PI * 2;

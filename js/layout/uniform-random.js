@@ -3,7 +3,9 @@
  *
  * Note: we could re-use the best-candidate code and set candidate=1.
  */
-class UniformRandom {
+import { check_inside } from "../helper.js";
+
+export class UniformRandom {
   async render(canvas, ctx, rng, config, svg) {
     let points = [];
     while (points.length < config.layout.number) {

@@ -5,7 +5,9 @@
  * https://medium.com/@fogleman/pen-plotter-programming-the-basics-ec0407ab5929
  * https://sighack.com/post/getting-creative-with-perlin-noise-fields
  */
-class Growth {
+import { check_inside, dist } from "../helper.js";
+
+export class Growth {
   async render(rng, config, points, g, canvas, ctx) {
     var segments = [];
     while (segments.length < config.segments) {

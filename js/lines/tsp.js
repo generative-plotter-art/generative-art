@@ -5,10 +5,12 @@
  * To make things fast, I first perform nearest insertion. Then perform
  * 2-opt which should remove most intersections.
  */
-class Tsp {
+import { solver } from "../tsp_solver.js"
+
+export class Tsp {
   async render(rng, config, points, g) {
     var t = await new Promise((done, _) => {
-      tsp_solver(points, solution => {
+      solver(points, solution => {
         for (var i=1; i<=solution.paths[0].length; i++) {
           let edge = document.createElementNS("http://www.w3.org/2000/svg", 'line');
           edge.setAttribute("x1", points[solution.paths[0][i-1]].x);

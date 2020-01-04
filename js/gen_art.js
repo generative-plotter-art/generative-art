@@ -13,7 +13,23 @@
  *    now), keeping line widths small, thinking about where the pen is going to be raised and lowered, etc.
  * 2. Algorithms must interact with the components. These are base images which influence the final image.
  */
-class GenArt {
+import $ from "jquery";
+import { UniformRandom } from "./layout/uniform-random.js";
+import { BestCandidate } from "./layout/best-candidate.js";
+import { Grid } from "./layout/grid.js";
+import { PoissonDisc } from "./layout/poisson-disc.js";
+
+import { Needles } from "./lines/needles.js";
+import { RegularPolygons } from "./lines/regular-polygons.js";
+import { Neighbors } from "./lines/neighbors.js";
+import { DelaunayTriangles } from "./lines/delaunay-triangles.js";
+import { Gabriel } from "./lines/gabriel.js";
+import { Tsp } from "./lines/tsp.js";
+import { Growth } from "./lines/growth.js";
+
+import { Csrng } from "./csrng.js";
+
+export class GenArt {
   constructor() {
     this.configs = [];
     this.current = document.location.hash.substr(1)|0;
@@ -176,22 +192,6 @@ class GenArt {
 // Some helpers
 function getJSON(file, callback) {
   $.getJSON(file, callback).fail((jqxhr, textStatus, err) => {console.error(textStatus); throw err});
-}
-
-function dist(p1, p2) {
-  var x = p1.x - p2.x;
-  var y = p1.y - p2.y;
-  return Math.sqrt(x * x + y * y);
-}
-
-function check_inside(x, y, canvas, ctx) {
-  let px = ((x + 1.0) / 2.0 * canvas.width)|0;
-  let py = ((y + 1.0) / 2.0 * canvas.height)|0;
-  if ((px == canvas.width) || (py == canvas.height)) {
-    return false;
-  }
-  let pixels = ctx.getImageData(px, py, 1, 1).data;
-  return (pixels[0] < 128) && (pixels[1] < 128) && (pixels[2] < 128);
 }
 
 new GenArt();

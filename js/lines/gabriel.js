@@ -2,7 +2,9 @@
  * Connects nodes which don't have any other nodes in their proximity.
  * https://en.wikipedia.org/wiki/Gabriel_graph
  */
-class Gabriel {
+import { dist } from "../helper.js";
+
+export class Gabriel {
   async render(rng, config, points, g) {
     for (let i=0; i<points.length; i++) {
       outer: for (let j=0; j<i; j++) {

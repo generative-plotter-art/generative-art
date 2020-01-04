@@ -3,7 +3,9 @@
  *
  * Note: this implementation is rather slow. Probably slower than best candidate!
  */
-class PoissonDisc {
+import { check_inside, dist } from "../helper.js";
+
+export class PoissonDisc {
   async render(canvas, ctx, rng, config, svg) {
     let points = [];
     while (points.length < config.layout.number) {
