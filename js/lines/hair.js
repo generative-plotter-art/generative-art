@@ -9,27 +9,30 @@ export class Hair {
   async render(rng, config, points, g, canvas, ctx) {
     let simplex = new SimplexNoise(await rng.float());
     let direction_bias = await rng.float() * Math.PI * 2;
-    for (let i=0; i<points.length; i++) {
-      let x1 = points[i].x;
-      let y1 = points[i].y;
+    for (let n=0; n<config.layers; n++) {
+      direction_bias += await rng.float() * 2 * config.layer_delta - config.layer_delta;
+      for (let i=n; i<points.length; i+=config.layers) {
+        let x1 = points[i].x;
+        let y1 = points[i].y;
 
-      while (true) {
-        let a = direction_bias + simplex.noise2D(x1*config.chaos, y1*config.chaos) * config.direction;
-        let x2 = x1 + Math.cos(a) * config.smoothness;
-        let y2 = y1 + Math.sin(a) * config.smoothness;
-        if (!check_inside(x2, y2, canvas, ctx)) {
-          break;
+        while (true) {
+          let a = direction_bias + simplex.noise2D(x1*config.chaos, y1*config.chaos) * config.direction;
+          let x2 = x1 + Math.cos(a) * config.smoothness;
+          let y2 = y1 + Math.sin(a) * config.smoothness;
+          if (!check_inside(x2, y2, canvas, ctx)) {
+            break;
+          }
+
+          let edge = document.createElementNS("http://www.w3.org/2000/svg", 'line');
+          edge.setAttribute("x1", x1);
+          edge.setAttribute("y1", y1);
+          edge.setAttribute("x2", x2);
+          edge.setAttribute("y2", y2);
+          g.append(edge);
+
+          x1 = x2;
+          y1 = y2;
         }
-
-        let edge = document.createElementNS("http://www.w3.org/2000/svg", 'line');
-        edge.setAttribute("x1", x1);
-        edge.setAttribute("y1", y1);
-        edge.setAttribute("x2", x2);
-        edge.setAttribute("y2", y2);
-        g.append(edge);
-
-        x1 = x2;
-        y1 = y2;
       }
     }
 

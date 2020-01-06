@@ -6,7 +6,7 @@
     "name": "images/sqlogo.png",
     "rng": {
       "algorithm": "csrng",
-      "seed": "73819975"
+      "seed": "60679307"
     },
     "points": {
       "layout": {
@@ -19,6 +19,8 @@
     },
     "lines": {
       "algorithm": "hair",
+      "layers": 10,
+      "layer_delta": 0.4,
       "smoothness": 0.01,
       "chaos": 0.5,
       "direction": 2,
