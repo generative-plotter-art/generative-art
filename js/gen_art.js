@@ -62,27 +62,22 @@ export class GenArt {
       e.click();
     })
 
-    document.body.onload = _ => {
-      getJSON("configs/all.json", configs => {
-        for (let i=0; i<configs.length; i++) {
-          getJSON(configs[i], config => {
-            this.setConfig(i, config);
-          });
-        }
-      });
+    document.body.onload = async _ => {
+      let configs = await getJSON("configs/all.json");
+      for (let i=0; i<configs.length; i++) {
+        this.setConfig(i, getJSON(configs[i]));
+      }
+      this.render();
     }
   }
 
   setConfig(index, config) {
     this.configs[index] = config;
-    if (index == this.current) {
-      this.render()
-    }
   }
 
   async render() {
     document.location.hash = this.current;
-    let config = this.configs[this.current];
+    let config = await this.configs[this.current];
 
     // reset things
     $(svg).empty();
@@ -204,7 +199,12 @@ export class GenArt {
   }
 }
 
-// Some helpers
-function getJSON(file, callback) {
-  $.getJSON(file, callback).fail((jqxhr, textStatus, err) => {console.error(textStatus); throw err});
+// A helper
+async function getJSON(file) {
+  return new Promise((resolve, reject) => {
+    $.getJSON(file, data => resolve(data)).fail((jqxhr, textStatus, err) => {
+      console.error(textStatus);
+      reject(err);
+    });
+  });
 }
