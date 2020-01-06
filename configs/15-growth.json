@@ -1,5 +1,6 @@
 {
   "title": "Growth",
+  "description": "Each line grows until reaching another line or the end of the shape.",
   "background": "#333",
   "foreground": "#88CA5E",
   "components": [{

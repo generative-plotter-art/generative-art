@@ -10,7 +10,10 @@
   </div>
 
   <svg id="svg" viewBox="-1 -1 2 2" xmlns="http://www.w3.org/2000/svg"></svg>
-  <div id="title"></div>
+  <div id="titlebox">
+    <div id="title"></div>
+    <div id="description"></div>
+  </div>
 <!-- todo:
   - Fix race condition with config loading...
 
@@ -20,7 +23,6 @@
   - rename "lines" to "graph" or "mesh"? Perhaps split needles/regular polygons/tsp into
     their own thing since it doesn't create a mesh?
   - fix race condition which causes next + two or more images to be rendered on top of each other.
-  - add some description to the output.
   - implement one or more maze generation algorithms.
   - implement rock/meteorite.
   - implement something with bezier curves.

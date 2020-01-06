@@ -1,12 +1,13 @@
 {
   "title": "Hair",
+  "description": "Inspired by <a href=\"https://sighack.com/post/getting-creative-with-perlin-noise-fields\">Getting Creative with Perlin Noise Fields</a>, Hair combines a directional bias with Perlin Noise. Multiple layers are overlayed.",
   "background": "#333",
   "foreground": "#FADCD9",
   "components": [{
     "name": "images/sqlogo.png",
     "rng": {
       "algorithm": "csrng",
-      "seed": "60679307"
+      "seed": "61078422"
     },
     "points": {
       "layout": {

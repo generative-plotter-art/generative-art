@@ -1,5 +1,6 @@
 {
   "title": "Best candidate",
+  "description": "Each point is the 'best' among 10 random choices. Best is defined as being furthest from all other points.",
   "background": "#333",
   "foreground": "#1da1f2",
   "components": [{

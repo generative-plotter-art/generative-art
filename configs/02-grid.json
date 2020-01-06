@@ -1,5 +1,6 @@
 {
   "title": "Heart grid",
+  "description": "Randomly chosen points are snapped into a grid.",
   "background": "#333",
   "foreground": "#FF2511",
   "components": [{

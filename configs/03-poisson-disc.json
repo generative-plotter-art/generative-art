@@ -1,5 +1,6 @@
 {
   "title": "Poisson disc",
+  "description": "Points cannot be closer than a predetermined distance. The result is typically more visually pleasant than uniform random.",
   "background": "#333",
   "foreground": "#36EEE0",
   "components": [{

@@ -1,5 +1,6 @@
 {
   "title": "Five thousand needles",
+  "description": "Randomly placed needles, inspired by <a href=\"https://en.wikipedia.org/wiki/Buffon%27s_needle_problem\">Buffon's needle problem</a>.",
   "background": "#eee",
   "foreground": "#222",
   "components": [{

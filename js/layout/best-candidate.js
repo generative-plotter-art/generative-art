@@ -1,6 +1,8 @@
 /**
  * BestCandidate is slower than Poisson-disc (when implemented right) and looks less nice.
  * I wrote it because the PoissonDisc is currently not optimized.
+ *
+ * See also https://bost.ocks.org/mike/algorithms/.
  */
 import { check_inside, dist } from "../helper.js";
 

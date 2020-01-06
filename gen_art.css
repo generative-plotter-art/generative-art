@@ -17,12 +17,24 @@ html, body {
   color: inherit;
 }
 
-#title {
+#titlebox {
   position: fixed;
-  bottom: 1em;
-  right: 1em;
+  bottom: 2em;
+  right: 2em;
   font-family: serif;
+  max-width: 20em;
+  border: 1px solid black;
+  padding: 1em;
 }
+
+#title {
+  padding-bottom: 1em;
+}
+
+#titlebox a {
+  color: inherit;
+}
+
 
 svg {
   position: fixed;

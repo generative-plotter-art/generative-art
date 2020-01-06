@@ -1,5 +1,6 @@
 {
   "title": "Uniform random",
+  "description": "Example of placing points at random, with a bias given by an image. Notice how some points are clumped together.",
   "background": "#333",
   "foreground": "#90ADC6",
   "components": [{

@@ -1,5 +1,6 @@
 {
   "title": "Traveling Salesman Path",
+  "description": "Approximate (but nearly optimal) solution for the Traveling Salesman Problem.",
   "background": "#333",
   "foreground": "#72C64B",
   "components": [{

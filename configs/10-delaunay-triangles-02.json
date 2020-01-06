@@ -1,5 +1,6 @@
 {
   "title": "Delaunay Triangles 02",
+  "description": "<a href=\"https://en.wikipedia.org/wiki/Delaunay_triangulation\">Delaunay triangulation</a>, without links between the logo's components.",
   "background": "#333",
   "foreground": "#FAD02C",
   "components": [{

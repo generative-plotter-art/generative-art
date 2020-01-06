@@ -1,5 +1,6 @@
 {
   "title": "Nachos",
+  "description": "Lots of triangles.",
   "background": "#333",
   "foreground": "#EEB5EB",
   "components": [{

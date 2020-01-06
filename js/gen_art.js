@@ -91,6 +91,8 @@ export class GenArt {
     document.body.style.backgroundColor = config.background;
     document.body.style.color = config.foreground;
     title.textContent = "#" + this.current + " " + config.title;
+    description.innerHTML = config.description;
+
     let rect = document.createElementNS("http://www.w3.org/2000/svg", 'rect');
     rect.setAttribute("x", "-1");
     rect.setAttribute("y", "-1");

@@ -1,5 +1,6 @@
 {
   "title": "Microscop-y",
+  "description": "Points which are close to each other are inter-connected. A small threshold is used.",
   "background": "#333",
   "foreground": "#88e",
   "components": [{
