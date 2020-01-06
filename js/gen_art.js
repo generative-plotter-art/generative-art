@@ -81,6 +81,10 @@ export class GenArt {
 
     // reset things
     $(svg).empty();
+    let s = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    s.setAttribute("viewBox", "-1 -1 2 2");
+    svg.append(s);
+
     $(rendering).show();
 
     document.body.style.backgroundColor = config.background;
@@ -88,13 +92,13 @@ export class GenArt {
     title.textContent = "#" + this.current + " " + config.title;
     description.innerHTML = config.description;
 
-    let rect = document.createElementNS("http://www.w3.org/2000/svg", 'rect');
+    let rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     rect.setAttribute("x", "-1");
     rect.setAttribute("y", "-1");
     rect.setAttribute("width", "2");
     rect.setAttribute("height", "2");
     rect.setAttribute("fill", config.background);
-    svg.append(rect);
+    s.append(rect);
 
     var promises = [];
     for (let i=0; i<config.components.length; i++) {
@@ -105,7 +109,7 @@ export class GenArt {
       img.onerror = e => {throw e};
       promises.push(new Promise((done, _) => {
         img.onload = async _ => {
-          var t = await this._render(config, component, img);
+          var t = await this._render(config, component, img, s);
           done(t);
         };
       }));
@@ -114,7 +118,7 @@ export class GenArt {
     $(rendering).hide();
   }
 
-  async _render(config, component, img) {
+  async _render(config, component, img, svg) {
     let canvas = document.createElement('canvas');
     canvas.width = img.width;
     canvas.height = img.height;

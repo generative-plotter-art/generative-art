@@ -9,20 +9,17 @@
     <div id="rendering">rendering...</div>
   </div>
 
-  <svg id="svg" viewBox="-1 -1 2 2" xmlns="http://www.w3.org/2000/svg"></svg>
+  <div id="svg"></div>
   <div id="titlebox">
     <div id="title"></div>
     <div id="description"></div>
   </div>
 <!-- todo:
-  - Fix race condition with config loading...
-
   - svg with different aspect ratio? Makes things like constant density tricky.
   - handle overlapping polylines. Currently, these won't plot correctly.
   - implement some simple hatches.
   - rename "lines" to "graph" or "mesh"? Perhaps split needles/regular polygons/tsp into
     their own thing since it doesn't create a mesh?
-  - fix race condition which causes next + two or more images to be rendered on top of each other.
   - implement one or more maze generation algorithms.
   - implement rock/meteorite.
   - implement something with bezier curves.
@@ -41,7 +38,8 @@
     - https://twitter.com/dimitrislad/status/1002514173773959168
     - https://reindernijhoff.net/tag/plotter/
     - https://codesandbox.io/s/canvas-sketch-noise-01-rowgw
-    - and lots more...
+    - and lots more..
+  - Create some kind of landing page / intro page.
 -->
   <div id="download"></div>
 
