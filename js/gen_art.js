@@ -79,13 +79,17 @@ export class GenArt {
     document.location.hash = this.current;
     let config = await this.configs[this.current];
 
+    // add rendering text
+    let r = document.createElement('div');
+    r.textContent = "rendering...";
+    $(rendering).empty();
+    rendering.append(r);
+
     // reset things
     $(svg).empty();
     let s = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     s.setAttribute("viewBox", "-1 -1 2 2");
     svg.append(s);
-
-    $(rendering).show();
 
     document.body.style.backgroundColor = config.background;
     document.body.style.color = config.foreground;
@@ -115,7 +119,9 @@ export class GenArt {
       }));
     }
     await Promise.all(promises);
-    $(rendering).hide();
+
+    // remove rendering... text
+    r.remove();
   }
 
   async _render(config, component, img, svg) {
