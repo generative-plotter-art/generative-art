@@ -22,7 +22,7 @@
       "max_distance": 0.025,
       "color": "#88e",
       "opacity": 0.9,
-      "width": 0.0002
+      "width": 0.001
     }
   },{
     "name": "images/sqlogo_inner.png",
@@ -43,7 +43,7 @@
       "max_distance": 0.025,
       "color": "#88e",
       "opacity": 0.9,
-      "width": 0.0002
+      "width": 0.001
     }
   }]
 }
